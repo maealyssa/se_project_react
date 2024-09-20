@@ -16,7 +16,7 @@ function WeatherCard({ weatherData, weatherDataTemp }) {
 
     return (
         <section className="weather-card">
-            <p className="weather-card__temp">{weatherDataTemp} &deg; F</p>
+            <p className="weather-card__temp">{weatherDataTemp}</p>
             <img 
                 src={weatherOptionUrl} 
                 alt={weatherOptionCondition} 

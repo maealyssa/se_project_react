@@ -1,36 +1,41 @@
 .header {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     padding: 32px 0 28px;
     font-weight: 700;
+    justify-content: space-between;
 }
 
-.header__logo {
+.header__logo_date {
     margin-right: 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.header__add-clothes-btn {
-    margin: 0 20px 0 auto;
-    border-style: none;
-    font-weight: 700;
-    cursor: pointer;
+.header__logo-image {
+    width: 89px;
 }
 
-.header___data-and-location {
-    margin: 0;
-}
-
-.header__avatar {
-    width: 40px;
-    height: 40px;
-}
-
-.header__user-container {
+.header__user_container {
     display: flex;
     align-items: center;
     gap: 12px
 }
 
-.header__username {
-    margin: 0;
+.header__add-clothes-btn {
+    border-style: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header__user {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.header__avatar {
+    width: 40px;
+    height: 40px;
 }
