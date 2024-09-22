@@ -4,6 +4,11 @@
     padding: 32px 0 28px;
     font-weight: 700;
     justify-content: space-between;
+    font-size: 20px;
+}
+
+.header__logo-link {
+    align-self: center;
 }
 
 .header__logo_date {
@@ -27,6 +32,7 @@
     border-style: none;
     font-weight: 700;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .header__user {
@@ -35,7 +41,13 @@
     align-items: center;
 }
 
+.header__profile-link {
+    text-decoration: none;
+    color: #000;
+}
+
 .header__avatar {
     width: 40px;
     height: 40px;
+    margin: 0;
 }

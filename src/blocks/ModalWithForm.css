@@ -79,6 +79,10 @@
     margin-top: 10px;
 }
 
+.modal__radio-input {
+    margin-right: 5px;
+}
+
 .modal__submit {
     background-color: #000;
     color: #fff;
