@@ -9,14 +9,14 @@ import { defaultClothingItems } from "../utils/constants";
 function Main({ weatherData, handleCardClick, clothingItems }) {
     const {currentTemperatureUnit} = useContext(CurrentTemperatureUnitContext)
     const weatherDataTemp = weatherData.temp?.[currentTemperatureUnit];
-
     return (
         <main>
-            <WeatherCard weatherData={weatherData} weatherDataTemp={weatherDataTemp} />
+            <WeatherCard weatherData={weatherData} weatherDataTemp={weatherDataTemp} currentTemperatureUnit={currentTemperatureUnit} />
             <section className="cards">
-                <p className="cards__text">Today is {weatherDataTemp} / You may want to wear:</p>
+                <p className="cards__text">{`Today is ${weatherDataTemp} 
+                °${currentTemperatureUnit} / You may want to wear:`}</p>
                 <ul className="cards__list">
-                {clothingItems
+                {clothingItems && clothingItems
                     .filter((item) => {
                         return item.weather === weatherData.type;
                     })

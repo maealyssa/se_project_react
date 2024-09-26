@@ -1,7 +1,7 @@
 import "../blocks/WeatherCard.css";
 import { weatherOptions } from "../utils/constants";
 
-function WeatherCard({ weatherData, weatherDataTemp }) {
+function WeatherCard({ weatherData, weatherDataTemp, currentTemperatureUnit }) {
 
     const filteredOptions = weatherOptions.filter((option) => {
         return (
@@ -16,7 +16,7 @@ function WeatherCard({ weatherData, weatherDataTemp }) {
 
     return (
         <section className="weather-card">
-            <p className="weather-card__temp">{weatherDataTemp}</p>
+            <p className="weather-card__temp">{`${weatherDataTemp}°${currentTemperatureUnit}`}</p>
             <img 
                 src={weatherOptionUrl} 
                 alt={weatherOptionCondition} 

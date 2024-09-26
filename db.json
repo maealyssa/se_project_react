@@ -57,7 +57,7 @@
     {
       "_id": 11,
       "name": "Shorts",
-      "weather": "Hot",
+      "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Shorts.png?etag=d728c496643f610de8d8fea92dd915ba"
     },
     {
@@ -79,45 +79,16 @@
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sunglasses.png?etag=a1bced9e331d36cb278c45df51150432"
     },
     {
-      "_id": 15,
-      "name": "Sweatshirt",
-      "weather": "warm",
-      "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sweatshirt.png?etag=008a9674757bea2e0bdb31242e364be0"
-    },
-    {
       "_id": 16,
       "name": "T-Shirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
     },
     {
-      "name": {
-        "name": "dress",
-        "url": "https://i.pinimg.com/236x/04/9c/13/049c13f816cebea94b391be73164d970.jpg"
-      },
+      "name": "dress",
+      "imageUrl": "https://i.pinimg.com/236x/31/23/ae/3123aec8c75ea360c3729ba4e21135ef.jpg",
+      "weather": "warm",
       "_id": 17
-    },
-    {
-      "name": {
-        "name": "dress",
-        "url": "https://i.pinimg.com/236x/04/9c/13/049c13f816cebea94b391be73164d970.jpg"
-      },
-      "_id": 18
-    },
-    {
-      "name": {
-        "name": "dress",
-        "url": "https://i.pinimg.com/474x/25/01/37/250137e239cf56b3e4178e045a61db4f.jpg"
-      },
-      "_id": 19
-    },
-    {
-      "name": {
-        "name": "dress",
-        "imageUrl": "https://i.pinimg.com/474x/25/01/37/250137e239cf56b3e4178e045a61db4f.jpg",
-        "weather": "cold"
-      },
-      "_id": 20
     }
   ]
 }

@@ -18,13 +18,13 @@ import { getItems, postItems, deleteItems } from "../utils/api";
 function App() {
     const [weatherData, setWeatherData] = useState({
         type: "", 
-        temp: { F: 999, C: 999 },
+        temp: { F: 999, C: 999},
         city: "",
     });
     const [activeModal, setActiveModal] = useState("");
     const [selectedCard, setSelectedCard] = useState({});
     const [currentTemperatureUnit, setCurrentTemperatureUnit] = useState('F');
-    const [clothingItems, setClothingItems] = useState({});
+    const [clothingItems, setClothingItems] = useState();
 
     useEffect(() => {
         getWeather(coordinates, APIkey)
@@ -39,6 +39,7 @@ function App() {
         getItems()
             .then((data) => {
                 setClothingItems(data);
+                console.log(data)
             }).catch(console.error);
     }, []);
 
@@ -49,10 +50,6 @@ function App() {
 
     const handleAddClick = () => {
         setActiveModal("add-garment");
-    }
-
-    const handleDeleteCard = () => {
-        console.log(selectedCard);
     }
 
     const closeActiveModal = () => {
@@ -66,9 +63,10 @@ function App() {
     };
 
     const onAddItem = (name, imageUrl, weather) => {
-        postItems({ name, imageUrl, weather })
+        postItems({ name: name, imageUrl: imageUrl, weather: weather })
             .then((card) => {
-                setClothingItems([card.data, ...clothingItems]);
+                setClothingItems((clothingItems) => [card, ...clothingItems]);
+                closeActiveModal();
             }).catch(console.error);
     }
 
@@ -80,7 +78,7 @@ function App() {
                         return item._id !== selectedCard._id;
                     })
                 )
-                setActiveModal("");
+                closeActiveModal();
             }).catch(console.error);
     }
 
@@ -104,7 +102,13 @@ function App() {
                 }></Route>
                 <Route 
                     path="/se_project_react/profile" 
-                    element={<Profile handleCardClick={handleCardClick}/>}>
+                    element={
+                        <Profile 
+                            handleAddClick={handleAddClick} 
+                            handleCardClick={handleCardClick}
+                            clothingItems={clothingItems}
+                        />
+                    }>
                 </Route>
             </Routes>
             <Footer />

@@ -12,15 +12,19 @@
 
 .modal__content.modal__content_type_image {
     height: 610px;
+    width: 498px;
     padding: 0;
     background-color: #fff;
 }
 
 .modal__content_image {
-    max-width: 498px;
-    max-height: 498px;
     overflow: hidden;
     border-radius: 20px 20px 0 0; 
+}
+
+.modal__img {
+    width: 498px;
+    height: 498px;
 }
 
 .modal__footer {
