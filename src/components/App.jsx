@@ -9,7 +9,7 @@ import Footer from "./Footer";
 import AddItemModal from "./AddItemModal";
 import Profile from "./Profile";
 
-import {CurrentTemperatureUnitContext} from "./CurrentTemperatureUnitContext";
+import {CurrentTemperatureUnitContext} from "../utils/CurrentTemperatureUnitContext";
 import { getWeather, filterWeatherData } from "../utils/WeatherApi";
 import { coordinates, APIkey } from "../utils/constants";
 import { getItems, postItems, deleteItems } from "../utils/api";
@@ -39,7 +39,6 @@ function App() {
         getItems()
             .then((data) => {
                 setClothingItems(data);
-                console.log(data)
             }).catch(console.error);
     }, []);
 
