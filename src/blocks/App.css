@@ -1,5 +1,5 @@
 .page {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   min-height: 100vh;
 }
 
@@ -7,5 +7,5 @@
   max-width: 1360px;
   margin: 0 auto;
   padding: 0 20px;
-  font-family: 'Cabinet Grotesk', sans-serif;
+  font-family: "Cabinet Grotesk", sans-serif;
 }

@@ -1,53 +1,53 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    padding: 32px 0 28px;
-    font-weight: 700;
-    justify-content: space-between;
-    font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  padding: 32px 0 28px;
+  font-weight: 700;
+  justify-content: space-between;
+  font-size: 20px;
 }
 
 .header__logo-link {
-    align-self: center;
+  align-self: center;
 }
 
 .header__logo_date {
-    margin-right: 24px;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .header__logo-image {
-    width: 89px;
+  width: 89px;
 }
 
 .header__user_container {
-    display: flex;
-    align-items: center;
-    gap: 12px
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .header__add-clothes-btn {
-    border-style: none;
-    font-weight: 700;
-    cursor: pointer;
-    background-color: transparent;
+  border-style: none;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: transparent;
 }
 
 .header__user {
-    display: flex;
-    gap: 12px;
-    align-items: center;
+  display: flex;
+  gap: 12px;
+  align-items: center;
 }
 
 .header__profile-link {
-    text-decoration: none;
-    color: #000;
+  text-decoration: none;
+  color: #000;
 }
 
 .header__avatar {
-    width: 40px;
-    height: 40px;
-    margin: 0;
+  width: 40px;
+  height: 40px;
+  margin: 0;
 }

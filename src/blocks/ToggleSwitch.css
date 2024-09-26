@@ -1,58 +1,58 @@
 .switch {
-    display: flex;
-    position: relative;
-    font-size: 14px;
-    color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  position: relative;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .switch:hover {
-    color: #000;
+  color: #000;
 }
 
 .switch__box:hover {
-    border-color: #000;
+  border-color: #000;
 }
 
 .switch__box {
-   border-radius: 25px;
-   border: 2px solid rgba(0, 0, 0, 0.5);
-   width: 56px;
-   height: 28px;
-   appearance: none;
-   cursor: pointer;
+  border-radius: 25px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  width: 56px;
+  height: 28px;
+  appearance: none;
+  cursor: pointer;
 }
 
 .switch__slider {
-    border-radius: 20px;
-    width: 28px;
-    height: 28px;
-    background-color: #000;
-    color: #fff;
-    text-align: center;
-    position: absolute;
-    cursor: pointer;
+  border-radius: 20px;
+  width: 28px;
+  height: 28px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  cursor: pointer;
 }
 
 .switch__slider-C {
-    left: 1px;
+  left: 1px;
 }
 
 .switch__slider-F {
-    left: 27px;
+  left: 27px;
 }
 
 .switch__active {
-    color: #fff;
+  color: #fff;
 }
 
 .switch__temp-C {
-    position: absolute;
-    top: -7px;
-    left: 10px;
+  position: absolute;
+  top: -7px;
+  left: 10px;
 }
 
 .switch__temp-F {
-    position: absolute;
-    top: -7px;
-    right: 10px;
+  position: absolute;
+  top: -7px;
+  right: 10px;
 }

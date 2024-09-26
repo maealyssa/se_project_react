@@ -83,12 +83,6 @@
       "name": "T-Shirt",
       "weather": "hot",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/T-Shirt.png?etag=44ed1963c44ab19cd2f5011522c5fc09"
-    },
-    {
-      "name": "dress",
-      "imageUrl": "https://i.pinimg.com/236x/31/23/ae/3123aec8c75ea360c3729ba4e21135ef.jpg",
-      "weather": "warm",
-      "_id": 17
     }
   ]
 }

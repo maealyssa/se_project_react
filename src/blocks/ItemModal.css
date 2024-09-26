@@ -1,56 +1,56 @@
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #0000004d;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #0000004d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal__content.modal__content_type_image {
-    height: 610px;
-    width: 498px;
-    padding: 0;
-    background-color: #fff;
+  height: 610px;
+  width: 498px;
+  padding: 0;
+  background-color: #fff;
 }
 
 .modal__content_image {
-    overflow: hidden;
-    border-radius: 20px 20px 0 0; 
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
 }
 
 .modal__img {
-    width: 498px;
-    height: 498px;
+  width: 498px;
+  height: 498px;
 }
 
 .modal__footer {
-    padding: 20px 20px 10px 20px;
-    display: flex;
-    justify-content: space-between;
+  padding: 20px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .modal__description {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.modal__caption, .modal__weather{
-    font-size: 20px;
-    margin: 0;
-    line-height: 24px;
+.modal__caption,
+.modal__weather {
+  font-size: 20px;
+  margin: 0;
+  line-height: 24px;
 }
-
 
 .modal__delete-btn {
-    color: rgba(255, 77, 0, 1);
-    border: none;
-    background-color: transparent;
-    font-weight: 700;
-    font-size: 20px;
-    cursor: pointer;
+  color: rgba(255, 77, 0, 1);
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  cursor: pointer;
 }
