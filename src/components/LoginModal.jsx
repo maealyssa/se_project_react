@@ -2,27 +2,30 @@ import { useState } from "react";
 
 import ModalWithForm from "./ModalWithForm";
 
-function LoginModal({ handleCloseClick, activeModal, onAddItem }) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+function LoginModal({ handleCloseClick, activeModal, onSignin }) {
+    const [data, setData] = useState({
+        email: "",
+        password: "",
+    });
 
-  const handleEmailChange = (e) => {
-    setEmail(e.target.value);
-  };
-  const handlePasswordChange = (e) => {
-    setPassword(e.target.value);
-  };
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddItem(email, password);
+    onSignin(data.email, data.password);
   };
 
   return (
     <ModalWithForm
       title="Log In"
       buttonText="Log In"
-      isOpen={activeModal === "add-garment" && "modal_opened"}
+      isOpen={activeModal === "log-in" && "modal_opened"}
       handleCloseClick={handleCloseClick}
       onSubmit={handleSubmit}
     >
@@ -32,10 +35,10 @@ function LoginModal({ handleCloseClick, activeModal, onAddItem }) {
           type="email"
           name="email"
           className="modal__input"
-          id="email"
+          id="login-email"
           placeholder="Email"
-          value={email}
-          onChange={handleEmailChange}
+          value={data.email}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="password" className="modal__label">
@@ -44,10 +47,10 @@ function LoginModal({ handleCloseClick, activeModal, onAddItem }) {
           type="password"
           name="password"
           className="modal__input"
-          id="password"
+          id="login-password"
           placeholder="Password"
-          value={password}
-          onChange={handlePasswordChange}
+          value={data.password}
+          onChange={handleChange}
         />
       </label>
     </ModalWithForm>

@@ -31,4 +31,14 @@ const deleteItems = (_id) => {
   })
 };
 
-export { getItems, postItems, deleteItems };
+const getUserInfo = (token) => {
+  return request(`${baseUrl}/users/me`, {
+    method: "GET",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+}
+
+export { getItems, postItems, deleteItems, request, getUserInfo };

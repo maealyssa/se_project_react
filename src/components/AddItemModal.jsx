@@ -3,21 +3,19 @@ import { useState } from "react";
 import ModalWithForm from "./ModalWithForm";
 
 function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
-  const [name, setName] = useState("");
-  const [imageUrl, setImageUrl] = useState("");
-  const [weather, setWeather] = useState("");
+    const [data, setData] = useState({
+      name: "",
+      imageUrl: "",
+      weather: "",
+    });
 
-  const handleNameChange = (e) => {
-    setName(e.target.value);
-  };
-
-  const handleUrlChange = (e) => {
-    setImageUrl(e.target.value);
-  };
-
-  const handleWeatherChange = (e) => {
-    setWeather(e.target.value);
-  };
+    const handleChange = (e) => {
+      const { name, value } = e.target;
+      setData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -40,8 +38,8 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
           className="modal__input"
           id="name"
           placeholder="Name"
-          value={name}
-          onChange={handleNameChange}
+          value={data.name}
+          onChange={handleChange}
         />
       </label>
       <label htmlFor="imageUrl" className="modal__label">
@@ -52,8 +50,8 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
           className="modal__input"
           id="imageUrl"
           placeholder="Image URL"
-          value={imageUrl}
-          onChange={handleUrlChange}
+          value={data.imageUrl}
+          onChange={handleChange}
         />
       </label>
       <fieldset className="modal__fieldset">
@@ -65,8 +63,8 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
             type="radio"
             name="weather-type"
             className="modal__radio-input"
-            checked={weather.toLowerCase() === "hot"}
-            onChange={handleWeatherChange}
+            checked={data.weather.toLowerCase() === "hot"}
+            onChange={handleChange}
           />
           Hot
         </label>
@@ -77,8 +75,8 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
             type="radio"
             name="weather-type"
             className="modal__radio-input"
-            checked={weather.toLowerCase() === "warm"}
-            onChange={handleWeatherChange}
+            checked={data.weather.toLowerCase() === "warm"}
+            onChange={handleChange}
           />
           Warm
         </label>
@@ -89,8 +87,8 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
             type="radio"
             name="weather-type"
             className="modal__radio-input"
-            checked={weather.toLowerCase() === "cold"}
-            onChange={handleWeatherChange}
+            checked={data.weather.toLowerCase() === "cold"}
+            onChange={handleChange}
           />
           Cold
         </label>
