@@ -123,6 +123,7 @@ function App() {
   }
 
   const onSignin = ({ email, password }) => {
+    console.log(email, password)
     if (!email || !password) {
       console.log("oops")
       return;
@@ -138,17 +139,17 @@ function App() {
       .catch(console.error)
   }
 
-  const onAddItem = (name, imageUrl, weather) => {
-    postItems({ name: name, imageUrl: imageUrl, weather: weather })
+  const onAddItem = (data) => {
+    postItems({ name: data.name, imageUrl: data.imageUrl, weather: data.weather }, token)
       .then((card) => {
-        setClothingItems((clothingItems) => [card, ...clothingItems]);
+        setClothingItems([card, ...clothingItems]);
         closeActiveModal();
       })
       .catch(console.error);
   };
 
   const onDeleteItem = () => {
-    deleteItems(selectedCard._id)
+    deleteItems(selectedCard._id, token)
       .then(() => {
         setClothingItems(
           clothingItems.filter((item) => {
@@ -159,6 +160,10 @@ function App() {
       })
       .catch(console.error);
   };
+
+  const onEditProfile = () => {
+    
+  }
 
   return (
     <CurrentUserContext.Provider value={currentUser}>

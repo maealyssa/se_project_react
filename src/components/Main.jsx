@@ -23,7 +23,7 @@ function Main({ weatherData, handleCardClick, clothingItems }) {
           {clothingItems &&
             clothingItems
               .filter((item) => {
-                return item.weather === weatherData.type;
+                return item.weather === weatherData.type
               })
               .map((item) => {
                 return (

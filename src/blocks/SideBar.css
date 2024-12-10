@@ -7,6 +7,7 @@
 
 .side-bar__avatar {
   width: 56px;
+  border-radius: 50%;
 }
 
 .side-bar__username {

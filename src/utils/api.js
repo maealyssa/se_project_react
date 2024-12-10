@@ -1,5 +1,10 @@
 const baseUrl = "http://localhost:3001";
 
+const baseHeaders = {
+    Accept: "application/json",
+    "Content-Type": "application/json",
+};
+
 const checkResponse = (res) => {
   return res.ok ? res.json() : Promise.reject(`Error: ${res.status}`);
 };
@@ -12,30 +17,32 @@ const getItems = () => {
   return request(`${baseUrl}/items`);
 };
 
-const postItems = ({ name, imageUrl, weather }) => {
+const postItems = ({ name, imageUrl, weather }, token) => {
   return request(`${baseUrl}/items`, {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      ...baseHeaders,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ name, imageUrl, weather }),
   })
 };
 
-const deleteItems = (_id) => {
+const deleteItems = (_id, token) => {
   return request(`${baseUrl}/items/${_id}`, {
     method: "DELETE",
     headers: {
-      "Content-Type": "application/json",
+      ...baseHeaders,
+      Authorization: `Bearer ${token}`,
     },
-  })
+  });
 };
 
 const getUserInfo = (token) => {
   return request(`${baseUrl}/users/me`, {
     method: "GET",
     headers: {
-      "Content-Type": "application/json",
+      ...baseHeaders,
       Authorization: `Bearer ${token}`,
     },
   });

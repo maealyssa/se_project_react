@@ -18,7 +18,7 @@ function EditProfileModal({ handleCloseClick, activeModal, onAddItem }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddItem(name, avatar);
+    onAddItem(data);
   };
 
   return (
@@ -57,4 +57,4 @@ function EditProfileModal({ handleCloseClick, activeModal, onAddItem }) {
   );
 }
 
-export default LoginModal;
+export default EditProfileModal;

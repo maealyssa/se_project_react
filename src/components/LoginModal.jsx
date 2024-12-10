@@ -18,7 +18,7 @@ function LoginModal({ handleCloseClick, activeModal, onSignin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSignin(data.email, data.password);
+    onSignin(data);
   };
 
   return (

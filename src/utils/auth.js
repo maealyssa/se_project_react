@@ -12,7 +12,7 @@ const baseHeaders = {
 const signup = ({ email, password, name, avatar }) => {
   return request(`${baseUrl}/signup`, {
     method: "POST",
-    baseHeaders,
+    ...baseHeaders,
     body: JSON.stringify({ email, password, name, avatar }),
   });
 };
@@ -20,7 +20,7 @@ const signup = ({ email, password, name, avatar }) => {
 const signin = (email, password) => {
     return request(`${baseUrl}/signin`, {
         method: "POST",
-        baseHeaders,
+        ...baseHeaders,
         body: JSON.stringify({ email, password }),
     });
 };

@@ -79,7 +79,7 @@ function RegisterModal({ handleCloseClick, activeModal, onSignup }) {
           className="modal__input"
           id="register-avatar"
           placeholder="Avatar URL"
-          value={data.avatarUrl}
+          value={data.avatar}
           onChange={handleChange}
           required
         />

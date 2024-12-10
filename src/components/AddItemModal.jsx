@@ -14,12 +14,14 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
       setData((prevData) => ({
         ...prevData,
         [name]: value,
+        
       }));
     };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onAddItem(name, imageUrl, weather);
+    console.log(data.weather)
+    onAddItem(data);
   };
 
   return (
@@ -46,7 +48,7 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
         Image{""}
         <input
           type="url"
-          name="url"
+          name="imageUrl"
           className="modal__input"
           id="imageUrl"
           placeholder="Image URL"
@@ -56,38 +58,37 @@ function AddItemModal({ handleCloseClick, activeModal, onAddItem }) {
       </label>
       <fieldset className="modal__fieldset">
         <legend className="modal__legend">Select the weather type</legend>
-        <label htmlFor="hot" className="modal__label modal__label_type_radio">
+        <label htmlFor="weather" className="modal__label modal__label_type_radio">
           <input
             value="hot"
             id="hot"
             type="radio"
-            name="weather-type"
+            name="weather"
             className="modal__radio-input"
-            checked={data.weather.toLowerCase() === "hot"}
             onChange={handleChange}
           />
           Hot
         </label>
-        <label htmlFor="warm" className="modal__label modal__label_type_radio">
+        <label htmlFor="weather" className="modal__label modal__label_type_radio">
           <input
             value="warm"
             id="warm"
             type="radio"
-            name="weather-type"
+            name="weather"
             className="modal__radio-input"
-            checked={data.weather.toLowerCase() === "warm"}
+            // checked={data.weather === "warm"}
             onChange={handleChange}
           />
           Warm
         </label>
-        <label htmlFor="cold" className="modal__label modal__label_type_radio">
+        <label htmlFor="weather" className="modal__label modal__label_type_radio">
           <input
             value="cold"
             id="cold"
             type="radio"
-            name="weather-type"
+            name="weather"
             className="modal__radio-input"
-            checked={data.weather.toLowerCase() === "cold"}
+            // checked={data.weather === "cold"}
             onChange={handleChange}
           />
           Cold
